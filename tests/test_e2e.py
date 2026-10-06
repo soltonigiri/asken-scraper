@@ -38,7 +38,7 @@ def site():
             )
 
         def do_POST(self):
-            assert self.path == "/login/", "The scraper must not write health records."
+            assert self.path == "/login/", f"Unexpected POST endpoint: {self.path}"
             data = parse_qs(
                 self.rfile.read(int(self.headers["Content-Length"])).decode()
             )
