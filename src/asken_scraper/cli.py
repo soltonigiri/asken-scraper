@@ -60,7 +60,7 @@ def parser():
     sync.add_argument(
         "--debug-dir",
         type=Path,
-        help="各ページのスクリーンショットを保存（個人情報を含む）",
+        help="各ページのスクリーンショットを保存",
     )
     export = sub.add_parser("csv", help="保存済みJSONからCSVを再生成（通信なし）")
     export.add_argument("--output", type=Path, default=Path("asken-export"))

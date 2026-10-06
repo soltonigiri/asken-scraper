@@ -1,0 +1,25 @@
+{
+  "name": "asken-scraper",
+  "version": "0.1.0",
+  "description": "Export your own Asken food and health records to JSON and CSV.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "asken-scraper": "bin/asken-scraper.mjs"
+  },
+  "files": [
+    "bin/asken-scraper.mjs",
+    "src/asken_scraper/*.py",
+    "pyproject.toml"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soltonigiri/asken-scraper.git"
+  },
+  "scripts": {
+    "test": "node --test tests/test_npm.mjs"
+  }
+}

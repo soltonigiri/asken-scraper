@@ -11,3 +11,5 @@ auth.json
 state.json
 asken-export/
 debug/
+node_modules/
+*.tgz

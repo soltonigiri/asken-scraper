@@ -13,7 +13,7 @@ MEALS = ("breakfast", "lunch", "dinner", "sweets")
 
 
 class ScrapeError(Exception):
-    """A page cannot be exported without risking incorrect data."""
+    """Page retrieval or parsing failed."""
 
 
 def number(value, *, optional=False):
@@ -28,10 +28,7 @@ def number(value, *, optional=False):
 
 def check_date(actual, expected):
     if actual != expected:
-        raise ScrapeError(
-            f"ページ内の日付が指定日 {expected} と一致しません。"
-            "閲覧できない期間か、サイトの表示変更の可能性があります。"
-        )
+        raise ScrapeError(f"ページ内の日付が指定日 {expected} と一致しません。")
 
 
 class AskenClient:
